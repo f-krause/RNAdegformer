@@ -122,7 +122,6 @@ def train_fold():
     pseudo_labels_path = f'{opts.project_path}/pseudo_labels/pseudo_labels.p'
     with open(pseudo_labels_path, 'rb') as file:
         long_preds, long_stds, short_preds, short_stds = pickle.load(file)
-        # TODO filter for signal/noise selected ids? Seems to work anyways
 
     # first dimension: different sequences, second dimension: sequence itself (cut at 91 for test set)
     # So what I want is: (N, 107/130, 5)
